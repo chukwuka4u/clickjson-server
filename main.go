@@ -2,6 +2,7 @@ package main
 
 import (
 	"net/http"
+	"time"
 
 	"github.com/chukwuka4u/clickjson-server/services"
 
@@ -17,6 +18,8 @@ func main() {
 		cors.Config{
 			AllowOrigins: []string{"https://clickjson.vercel.app", "http://localhost:5173"},
 			AllowMethods: []string{"GET", "POST", "OPTIONS"},
+			AllowHeaders: []string{"Content-Type"},
+			MaxAge:       12 * time.Hour,
 		},
 	))
 
