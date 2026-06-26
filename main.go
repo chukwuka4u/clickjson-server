@@ -16,7 +16,7 @@ func main() {
 	router.Use(cors.New(
 		cors.Config{
 			AllowOrigins: []string{"https://clickjson.vercel.app", "http://localhost:5173"},
-			AllowMethods: []string{"GET", "POST"},
+			AllowMethods: []string{"GET", "POST", "OPTIONS"},
 		},
 	))
 
