@@ -33,8 +33,8 @@ func HandleMockGeneration(ctx *gin.Context) {
 	if req.Count <= 0 {
 		req.Count = 10
 	}
-	if req.Count > 100 {
-		req.Count = 100
+	if req.Count > 500 {
+		req.Count = 500
 	}
 
 	mockDataList := make([]map[string]interface{}, req.Count)
